@@ -1,0 +1,14 @@
+str1 = str(input("Hello User. \nEnter the String:"))
+str_len = len(str1)
+print("\nThe String Length is:",str_len)
+count = 0
+for val in range(0,str_len-1):
+    if str1[int(val)] == str1[int(str_len)-1]:
+        str_len = str_len-1
+    else:
+        count = count + 1
+                
+if count == 0:
+    print("\nEntered String is a Palindrome")
+else:
+    print("\nEntered String is not a Palindrome")
