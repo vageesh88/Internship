@@ -1,0 +1,27 @@
+while True:
+    try:
+        num = int(input('Enter the number you want to check:'))
+
+    except:
+        print('\nERROR!! Entered value is not an integer.')
+    
+    else:
+        if num < 0:
+            print('\nEntered value is a Negetive Integer.')
+        
+        elif num == 0:
+            print('\n"0" is not a Prime Number.')
+        
+        elif num == 1:
+            print('\n"1" is a Unique Number')
+        
+        else:
+            count = 0
+            for val in range(2,num):
+                if num % val == 0:
+                    count = count + 1
+                    break
+            if count > 0:
+                print('\n',num,'is not a Prime Number.')
+            else:
+                print('\n',num,'is a Prime Number.')
