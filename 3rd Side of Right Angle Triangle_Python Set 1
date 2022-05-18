@@ -1,0 +1,41 @@
+import math
+
+while True:
+    try:
+        a = float(input("Enter length of first side:"))
+        side1 = str(input("First entered side is a Base-'b' OR Perpendicular-'p' OR Hypotenuse-'h'? \nEnter your response:"))
+        b = float(input("Enter length of second side:"))
+        side2 = str(input("Second entered side is a Base-'b' OR Perpendicular-'p' OR Hypotenuse-'h'? \nEnter your response:"))
+    
+    except:
+        if side1!='b'or'p'or'h':
+            print('Invalid Response. Please try again.')
+            continue
+            
+        if side2!='b'or'p'or'h':
+            print('Invalid Response. Please try again.')
+            continue
+            
+        if side1 == side2:
+            print('Error!! Two sides cannot be of same type.')
+            continue
+
+    else:
+        if (side1=='b' and side2=='p') or (side1=='p' and side2=='b'):
+            c = math.sqrt(a**2 + b**2)
+            print("\nThe length of third side is: ",c,"\nIt is the Hypotenuse.")
+        elif (side1=='h' and side2=='b'):
+            c = math.sqrt(a**2 - b**2)
+            print("\nThe length of third side is: ",c,"\nIt is the Perpendicular.")
+        elif (side1=='b' and side2=='h'):
+            c = math.sqrt(b**2 - a**2)
+            print("\nThe length of third side is: ",c,"\nIt is the Perpendicular.")
+        elif (side1=='h' and side2=='p'):
+            c = math.sqrt(a**2 - b**2)
+            print("\nThe length of third side is: ",c,"\nIt is the Base.")
+        elif (side1=='p' and side2=='h'):
+            c = math.sqrt(b**2 - a**2)
+            print("\nThe length of third side is: ",c,"\nIt is the Base.")
+        else:
+            print("\nThere is a mistake in the Entry. Please check the sides entered!!")
+            break
