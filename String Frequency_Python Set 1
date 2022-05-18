@@ -1,8 +1,0 @@
-str1 = str(input('Hello User.\nEnter the string value:'))
-str2 = set(str1)
-str2 = list(str2)
-str3 = list(str1)
-print('\nElements of your String are:',str2,'\n')
-for val in range(0,len(str2)):
-    counter = str3.count(str2[val])
-    print('The Frequency of',str2[val],'is',counter)
