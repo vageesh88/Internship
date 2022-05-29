@@ -1,1 +1,1 @@
-# Internship
+# Internship Projects and Assignments
